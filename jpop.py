@@ -84,7 +84,7 @@ def javarchive_getimg(jg_list):
 
 
 def javarchive_sub1(js1_list):
-  #js1_html = open('javarch_avsa-074_sub.html', 'r')
+  #js1_html = open('avsa-074_sub.html', 'r')
   #js1_soup = BeautifulSoup(js1_html, "html.parser")
   js1_soup = get_soup(js1_list[3])
   if js1_soup:
@@ -101,7 +101,7 @@ def javarchive_sub1(js1_list):
 
 
 def javarchive_main(jm_list):
-  #jm_html = open('javarch_avsa-074.html', 'r')
+  #jm_html = open('avsa-074.html', 'r')
   #jm_soup = BeautifulSoup(jm_html, "html.parser")
   jm_list.append('http://........./?s='+jm_list[0])
   jm_soup = get_soup(jm_list[-1])
@@ -147,17 +147,7 @@ if __name__=='__main__':
 
 
 '''
-[
-'hzgd-095',
-'e:/t',
-'http://javarchive.com/?s=hzgd-095',
-u'http://javarchive.com/fhd-hzgd-095-%e6%81%af%e5%ad%90%e3%81%ae%e5%90%8c%e7%b4%9a%e7%94%9f%e3%82%92%e5%a6%8a%e5%a8%a0%e5%8d%b1%e9%99%ba%e6%97%a5%e3%81%ab%e3%83%9e%e3%83%b3%e3%83%81%e3%83%a9%e8%aa%98%e6%83%91-%e4%bd%90/',
-u'HZGD-095 \u606f\u5b50\u306e\u540c\u7d1a\u751f\u3092\u598a\u5a20\u5371\u967a\u65e5\u306b\u30de\u30f3\u30c1\u30e9\u8a98\u60d1 \u4f50\u3005\u6728\u3042',
-[u'http://img.javstore.net/images/h_1100hzgd095pl.jpg', u'http://img.javstore.net/images/h_1100hzgd095jp-1.jpg', u'http://img.javstore.net/images/h_1100hzgd095jp-2.jpg', u'http://img.javstore.net/images/h_1100hzgd095jp-3.jpg', u'http://img.javstore.net/images/h_1100hzgd095jp-4.jpg', u'http://img.javstore.net/images/h_1100hzgd095jp-5.jpg', u'http://img.javstore.net/images/h_1100hzgd095jp-6.jpg', u'http://img.javstore.net/images/h_1100hzgd095jp-7.jpg', u'http://img.javstore.net/images/h_1100hzgd095jp-8.jpg', u'http://img.javstore.net/images/h_1100hzgd095jp-9.jpg', u'http://img.javstore.net/images/h_1100hzgd095jp-10.jpg', u'http://img.javstore.net/images/h_1100hzgd095jp-11.jpg', u'http://img.javstore.net/images/h_1100hzgd095jp-12.jpg', u'http://img.javstore.net/images/h_1100hzgd095jp-13.jpg', u'http://img.javstore.net/images/h_1100hzgd095jp-14.jpg']
-]
-
-
-#get_image('http://javpop.com/2014/12/16/tokyo_hot-n1007.html')
+#get_image('')
 
 for s in soup.findAll('a'):
   if repr(s.get('title'))[2] == '[':
