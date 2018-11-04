@@ -30,7 +30,7 @@ def print_to_console(text):
   '''
   # Prints a (unicode) string to the console, encoded depending on the stdout
   # encoding (eg. cp437 on Windows). Works with Python 2 and 3.
-  WANZ-132 \u7d76\u5bfe\u670d\u5f93 VIP\u5c02\u7528\u5974\u96b7\u30ca\u30fc\u30b9 \u5bae\u91ce\u77b3
+  ANZ-132 \u7d76\u5bfe\u670d\u5f93 VIP\u5c02\u7528\u5974\u96b7\u30ca\u30fc\u30b9 \u5bae\u91ce\u77b3
   '''
   try:
     sys.stdout.write(text)
@@ -46,15 +46,6 @@ def print_to_console(text):
 
 def toSearchText(str):
   for j in [
-            ['-1pon','+1pon'],
-            ['-caribpr-high','+carib'], 
-            ['Caribbean-','carib+'], ['Caribpr-','carib+'],
-            ['-caribpr',''],
-            ['-1080p',''], ['-720p',''],
-            ['[44x.me]',''], ['[Thz.la]',''],
-            ['[ThZu.Cc]',''],
-            ['[44x.me]',''],
-            ['~kan224.com',''],
             ['.mkv',''], ['.mp4',''], ['cd1',''],
             [' ','']
            ]:
@@ -134,7 +125,7 @@ def javarchive_getimg(jg_list):
 
 
 def javarchive_sub1(js1_list):
-  #js1_html = open('javarchive_avsa-074_sub.html', 'r')
+  #js1_html = open('mavarchive_sa-074_sub.html', 'r')
   #js1_soup = BeautifulSoup(js1_html, "html.parser")
   js1_soup = get_soup(js1_list[3])
   if js1_soup:
@@ -151,9 +142,9 @@ def javarchive_sub1(js1_list):
 
 
 def javarchive_main(jm_list):
-  #jm_html = open('javarchive_avsa-074.html', 'r')
+  #jm_html = open('mavarchive_sa-074.html', 'r')
   #jm_soup = BeautifulSoup(jm_html, "html.parser")
-  jm_list.append('http://javarchive.com/?s='+jm_list[0])
+  jm_list.append('http://mavarchive.com/?s='+jm_list[0])
   jm_soup = get_soup(jm_list[-1])
   jm_found = False
   if jm_soup:
@@ -191,7 +182,7 @@ if __name__=='__main__':
   #gc.enable()
   #gc.collect()
   if len(sys.argv) > 1:
-    #win32api.MessageBox(0, sys.argv[1], 'JavArchive Window')
+    #win32api.MessageBox(0, sys.argv[1], 'Archive Window')
     m_path, m_filename = os.path.split(sys.argv[1])
     #print '['+m_path+']', '['+m_filename+']'
     if not m_path:
@@ -223,14 +214,14 @@ if __name__=='__main__':
 [
 0..'hzgd-095',
 1..'e:/t',
-2..'http://javarchive.com/?s=hzgd-095',
-3..u'http://javarchive.com/fhd-hzgd-095-%e6%81%af%e5%ad%90%e3%81%ae%e5%90%8c%e7%b4%9a%e7%94%9f%e3%82%92%e5%a6%8a%e5%a8%a0%e5%8d%b1%e9%99%ba%e6%97%a5%e3%81%ab%e3%83%9e%e3%83%b3%e3%83%81%e3%83%a9%e8%aa%98%e6%83%91-%e4%bd%90/',
+2..'http://mav/?s=hzgd-095',
+3..u'http://mav/fhd-hzgd-095-%e6%81%af%e5%ad%90%e3%81%ae%e5%90%8c%e7%b4%9a%e7%94%9f%e3%82%92%e5%a6%8a%e5%a8%a0%e5%8d%b1%e9%99%ba%e6%97%a5%e3%81%ab%e3%83%9e%e3%83%b3%e3%83%81%e3%83%a9%e8%aa%98%e6%83%91-%e4%bd%90/',
 4..u'HZGD-095 \u606f\u5b50\u306e\u540c\u7d1a\u751f\u3092\u598a\u5a20\u5371\u967a\u65e5\u306b\u30de\u30f3\u30c1\u30e9\u8a98\u60d1 \u4f50\u3005\u6728\u3042',
-5..[u'http://img.javstore.net/images/h_1100hzgd095pl.jpg', u'http://img.javstore.net/images/h_1100hzgd095jp-1.jpg']
+5..[u'http://img.mav.net/images/110hd095pl.jpg', u'http://img.mav.net/images/1100hzgd095jp-1.jpg']
 ]
 
 
-#get_image('http://javpop.com/2014/12/16/tokyo_hot-n1007.html')
+#get_image('http://....1007.html')
 
 for s in soup.findAll('a'):
   if repr(s.get('title'))[2] == '[':
@@ -240,7 +231,7 @@ with open('./path_to_output_f.txt', 'a') as f:
   f.write("{}\t{}\t{}\t{}\n".format(username, auth, role, node))
 
 def get_main(url, outpath):
-  #html_file = open('javarchive_avsa-074.html', 'r')
+  #html_file = open('sa-074.html', 'r')
   #soup = BeautifulSoup(html_file, "html")
   soup = get_soup(url)
   if soup:
